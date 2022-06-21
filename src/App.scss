@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap');
+
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+$light-grayish-cyan: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+$font: 'League Spartan';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: $light-grayish-cyan;
+  font-family: $font;
+}
+
+header {
+  background-color: $desaturated-dark-cyan;
+  height: 156px;
+  margin-bottom: 3.5rem;
+}
+
+svg {
+  width: 100%;
+}
+
+main {
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+
+.filters--container {
+  max-width: 950px;
+  width: 100%;
+  position: relative;
+  top: -5.75rem;
+  padding: 1.5rem 1.25rem;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 20px 30px -30px $desaturated-dark-cyan;
+}
+
+.clear {
+  color: $dark-grayish-cyan;
+  padding-left: 1rem;
+  &:hover {
+    cursor: pointer;
+    color: $desaturated-dark-cyan;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.filters--ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters--filter {
+  background-color: $light-grayish-cyan;
+  color: $desaturated-dark-cyan;
+  letter-spacing: .5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  p {
+    padding: .35rem .5rem;
+  }
+  svg {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: .5rem .5rem .2rem;
+    height: 100%;
+    background-color: $desaturated-dark-cyan;
+  }
+}
+
+.filters--filter:hover > svg {
+  background-color: black;
+}
+
+.card--ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 950px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  padding:  2.2rem 1.2rem;
+  border-left: 5px solid $desaturated-dark-cyan;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  box-shadow: 0px 20px 30px -30px $desaturated-dark-cyan;
+}
+
+.card--company-logo {
+  height: 50px;
+  margin-top: calc(-25px - 2.2rem);
+  margin-bottom: .7rem;
+}
+
+.card--desktop-flex-middle {
+  border-bottom: 1px solid rgba($dark-grayish-cyan, .5);
+  width: 100%;
+}
+
+.card--company-and-tags {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.card--company { 
+  color: $desaturated-dark-cyan;
+  letter-spacing: .5px;
+}
+
+.card--new, .card--featured {
+  text-transform: uppercase;
+  color: $light-grayish-cyan;
+  padding: .4rem .7rem .2rem;
+  border-radius: 100px;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .75px;
+}
+
+.card--new {
+  background-color: $desaturated-dark-cyan;
+  margin-left: .5rem;
+}
+
+.card--featured {
+  background-color: black;
+}
+
+.card--job-title {
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  padding-top: .5rem;
+  cursor: pointer;
+  &:hover {
+    color: $desaturated-dark-cyan;
+
+  }
+}
+
+.card--info {
+  display: flex;
+  gap: .25rem;
+  padding: .5rem 0 1rem;
+  font-weight: 300;
+  color: $dark-grayish-cyan;
+  letter-spacing: .5px;
+  width: 100%;
+}
+
+.card--filter-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.card--filter-list > li {
+  border-radius: 5px;
+  background-color: $light-grayish-cyan;
+  color: $desaturated-dark-cyan;
+  padding: .25rem .5rem;
+  letter-spacing: .5px;
+  cursor: pointer;
+  &:hover {
+    background-color: $desaturated-dark-cyan;
+    color: $light-grayish-cyan;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .card {
+    padding: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card--desktop-flex-middle {
+    border-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  .card--company-logo {
+    height: 80px;
+    margin: 0;
+  }
+
+  .card--new, .card--featured {
+    padding: .2rem .5rem .1rem;
+  }
+
+  .card--job-title {
+    font-size: 1.25rem;
+  }
+
+  .card--info {
+    padding-top: .2rem;
+    padding-bottom: 0;
+  }
+
+  .card--filter-list {
+    flex-wrap: nowrap;
+    margin-left: auto;
+    padding-left: .5rem;
+  }
+}

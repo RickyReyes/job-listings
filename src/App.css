@@ -1,38 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background-color: #eef6f6;
+  font-family: "League Spartan";
+}
+
+header {
+  background-color: #5ba4a4;
+  height: 156px;
+  margin-bottom: 3.5rem;
+}
+
+svg {
+  width: 100%;
+}
+
+main {
+  margin: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 7rem;
 }
 
-.App-link {
-  color: #61dafb;
+.filters--container {
+  max-width: 950px;
+  width: 100%;
+  position: relative;
+  top: -5.75rem;
+  padding: 1.5rem 1.25rem;
+  background-color: white;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 20px 30px -30px #5ba4a4;
+          box-shadow: 0px 20px 30px -30px #5ba4a4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.clear {
+  color: #7b8e8e;
+  padding-left: 1rem;
+}
+
+.clear:hover {
+  cursor: pointer;
+  color: #5ba4a4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.filters--ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters--filter {
+  background-color: #eef6f6;
+  color: #5ba4a4;
+  letter-spacing: .5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.filters--filter p {
+  padding: .35rem .5rem;
+}
+
+.filters--filter svg {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: .5rem .5rem .2rem;
+  height: 100%;
+  background-color: #5ba4a4;
+}
+
+.filters--filter:hover > svg {
+  background-color: black;
+}
+
+.card--ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -2rem;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 950px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  padding: 2.2rem 1.2rem;
+  border-left: 5px solid #5ba4a4;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  -webkit-box-shadow: 0px 20px 30px -30px #5ba4a4;
+          box-shadow: 0px 20px 30px -30px #5ba4a4;
+}
+
+.card--company-logo {
+  height: 50px;
+  margin-top: calc(-25px - 2.2rem);
+  margin-bottom: .7rem;
+}
+
+.card--desktop-flex-middle {
+  border-bottom: 1px solid rgba(123, 142, 142, 0.5);
+  width: 100%;
+}
+
+.card--company-and-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+.card--company {
+  color: #5ba4a4;
+  letter-spacing: .5px;
+}
+
+.card--new, .card--featured {
+  text-transform: uppercase;
+  color: #eef6f6;
+  padding: .4rem .7rem .2rem;
+  border-radius: 100px;
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .75px;
+}
+
+.card--new {
+  background-color: #5ba4a4;
+  margin-left: .5rem;
+}
+
+.card--featured {
+  background-color: black;
+}
+
+.card--job-title {
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  padding-top: .5rem;
+  cursor: pointer;
+}
+
+.card--job-title:hover {
+  color: #5ba4a4;
+}
+
+.card--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .25rem;
+  padding: .5rem 0 1rem;
+  font-weight: 300;
+  color: #7b8e8e;
+  letter-spacing: .5px;
+  width: 100%;
+}
+
+.card--filter-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.card--filter-list > li {
+  border-radius: 5px;
+  background-color: #eef6f6;
+  color: #5ba4a4;
+  padding: .25rem .5rem;
+  letter-spacing: .5px;
+  cursor: pointer;
+}
+
+.card--filter-list > li:hover {
+  background-color: #5ba4a4;
+  color: #eef6f6;
+}
+
+@media only screen and (min-width: 850px) {
+  .card {
+    padding: 2rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .card--desktop-flex-middle {
+    border-bottom: 0;
+    padding-left: 1rem;
+  }
+  .card--company-logo {
+    height: 80px;
+    margin: 0;
+  }
+  .card--new, .card--featured {
+    padding: .2rem .5rem .1rem;
+  }
+  .card--job-title {
+    font-size: 1.25rem;
+  }
+  .card--info {
+    padding-top: .2rem;
+    padding-bottom: 0;
+  }
+  .card--filter-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-left: auto;
+    padding-left: .5rem;
   }
 }
+/*# sourceMappingURL=App.css.map */
