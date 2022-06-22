@@ -247,6 +247,9 @@ main {
   color: #5ba4a4;
   padding: .25rem .5rem;
   letter-spacing: .5px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   cursor: pointer;
 }
 
