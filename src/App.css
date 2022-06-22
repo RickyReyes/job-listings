@@ -94,6 +94,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   border-radius: 5px;
 }
 
@@ -104,7 +110,7 @@ main {
 .filters--filter svg {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: .5rem .5rem .2rem;
+  padding: .5rem .5rem .3rem;
   height: 100%;
   background-color: #5ba4a4;
 }
@@ -247,9 +253,6 @@ main {
   color: #5ba4a4;
   padding: .25rem .5rem;
   letter-spacing: .5px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
   cursor: pointer;
 }
 
