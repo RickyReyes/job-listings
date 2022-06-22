@@ -40,6 +40,9 @@ main {
 }
 
 .filters--container {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   max-width: 950px;
   width: 100%;
   position: relative;
@@ -74,12 +77,19 @@ main {
 }
 
 .filters--ul {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -90,6 +100,7 @@ main {
 }
 
 .filters--filter {
+  height: 30px;
   background-color: #eef6f6;
   color: #5ba4a4;
   letter-spacing: .5px;
@@ -97,12 +108,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 5px;
 }
 
 .filters--filter p {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   padding: .35rem .5rem;
-  padding: .5rem .5rem 0rem;
 }
 
 .filters--filter svg {
@@ -110,6 +126,7 @@ main {
   border-bottom-right-radius: 5px;
   padding: .5rem .5rem .5rem;
   height: 100%;
+  width: 30px;
   background-color: #5ba4a4;
 }
 
@@ -231,6 +248,7 @@ main {
   color: #7b8e8e;
   letter-spacing: .5px;
   width: 100%;
+  white-space: nowrap;
 }
 
 .card--filter-list {

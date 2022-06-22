@@ -40,6 +40,7 @@ main {
 }
 
 .filters--container {
+  height: min-content;
   max-width: 950px;
   width: 100%;
   position: relative;
@@ -66,30 +67,35 @@ main {
 }
 
 .filters--ul {
+  height: min-content;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: start;
   gap: 1rem;
 }
 
 .filters--filter {
+  height: 30px;
   background-color: $light-grayish-cyan;
   color: $desaturated-dark-cyan;
   letter-spacing: .5px;
   cursor: pointer;
   display: flex;
+  align-items: center;
   border-radius: 5px;
   p {
+    width: min-content;
     padding: .35rem .5rem;
-    padding: .5rem .5rem 0rem;
   }
   svg {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: .5rem .5rem .5rem;
     height: 100%;
+    width: 30px;
     background-color: $desaturated-dark-cyan;
   }
 }
@@ -175,7 +181,6 @@ main {
   cursor: pointer;
   &:hover {
     color: $desaturated-dark-cyan;
-
   }
 }
 
@@ -187,6 +192,7 @@ main {
   color: $dark-grayish-cyan;
   letter-spacing: .5px;
   width: 100%;
+  white-space: nowrap;
 }
 
 .card--filter-list {
