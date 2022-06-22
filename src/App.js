@@ -29,13 +29,13 @@ export default function App() {
   }).map((job, idx) => {
     let cardFilters = [job.role, job.level, ...job.languages, ...job.tools]
     return (
-      <li className="card" key={idx}>
+      <li className={"card " + (job.featured ? "card--featured" : "")} key={idx}>
         <img src={job.logo} className="card--company-logo" />
         <div className="card--desktop-flex-middle">
           <div className="card--company-and-tags">
             <p className="card--company">{job.company}</p>
-            {job.new && <p className="card--new">new!</p>}  
-            {job.featured && <p className="card--featured">featured</p>}
+            {job.new && <p className="card--new-pill">new!</p>}  
+            {job.featured && <p className="card--featured-pill">featured</p>}
           </div>
           <h2 className="card--job-title">{job.position}</h2>
           <div className="card--info">
