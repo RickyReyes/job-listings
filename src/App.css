@@ -97,9 +97,6 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
   border-radius: 5px;
 }
 
