@@ -69,6 +69,7 @@ main {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -78,8 +79,6 @@ main {
   letter-spacing: .5px;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   border-radius: 5px;
   p {
     padding: .35rem .5rem;
