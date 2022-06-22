@@ -70,6 +70,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: start;
   gap: 1rem;
 }
 
@@ -82,11 +83,12 @@ main {
   border-radius: 5px;
   p {
     padding: .35rem .5rem;
+    padding: .5rem .5rem 0rem;
   }
   svg {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: .5rem .5rem .3rem;
+    padding: .5rem .5rem .5rem;
     height: 100%;
     background-color: $desaturated-dark-cyan;
   }
